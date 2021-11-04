@@ -2,8 +2,8 @@ module "network" {
   source  = "app.terraform.io/simon-cobb/network/google"
   version = "3.4.0"
   # insert required variables here
-      project_id   = var.project
-    network_name = "simon-network"
+    project_id   = var.project
+    network_name = "gaurav-network"
     routing_mode = "GLOBAL"
 
     subnets = [
