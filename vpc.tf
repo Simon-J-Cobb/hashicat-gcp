@@ -1,6 +1,6 @@
 module "vpc" {
     source  = "terraform-google-modules/network/google"
-    version = "3.4.0"
+    version = "~> 3.0"
 
     project_id   = var.project
     network_name = "simon-network"
@@ -38,8 +38,6 @@ module "vpc" {
             description            = "route through proxy to reach app"
             destination_range      = "10.50.10.0/24"
             tags                   = "app-proxy"
-            next_hop_instance      = "app-proxy-instance"
-            next_hop_instance_zone = var.zone
         },
     ]
 }
